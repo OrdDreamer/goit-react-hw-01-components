@@ -1,0 +1,85 @@
+.redText {
+  color: red;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(140,149,159,0.15);
+  border: 1px solid #d0d7de;
+  overflow: hidden;
+  cursor: default;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+
+.infoContainer.noImage::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  content: "No image";
+  font-size: 35px;
+  color: #919191;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  font-size: 24px;
+  color: #919191;
+  text-align: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  background-color: #f1f1f1;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 32px;
+  color: #000;
+}
+
+.statsContainer {
+  display: flex;
+}
+
+.statsItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 20px 5px;
+  color: #919191;
+  text-transform: capitalize;
+  font-size: 20px;
+  border: 1px solid #dae1ea;
+  border-left: none;
+  border-bottom: none;
+  background-color: #f3f6f9;
+}
+
+.statsItem:last-child {
+  border-right: none;
+}
+
+.statsValue {
+  font-weight: 600;
+  color: #000
+}
