@@ -20,7 +20,7 @@ const ProfileCard = ({ username, tag, location, avatar, stats, className }) => {
           <span>{location}</span>
         </p>
       </div>
-      <ul className={styles.statsContainer}>
+      <ul className={styles.stats}>
         {Object.entries(stats).map((statsItem, index, array) => {
           return (
             <li key={statsItem[0]} className={styles.statsItem} style={{
