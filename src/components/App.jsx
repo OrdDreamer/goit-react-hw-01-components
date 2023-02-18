@@ -1,12 +1,14 @@
 import styles from './app.module.css'
 import ProfileCard from './ProfileCard';
+import Statistics from './Statistics';
 import userData from '../data/user.json';
+import statisticsData from '../data/statistics.json';
 
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
+        minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -23,6 +25,12 @@ export const App = () => {
         avatar={userData.avatar}
         stats={userData.stats}
         className={styles.profile}
+      />
+
+      <Statistics
+        title={"Upload stats"}
+        stats={statisticsData}
+        className={styles.stats}
       />
     </div>
   );
