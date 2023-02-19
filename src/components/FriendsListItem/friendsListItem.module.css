@@ -1,0 +1,48 @@
+.item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(140, 149, 159, 0.15);
+  border: 1px solid #d0d7de;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: default;
+  padding: 10px 15px;
+}
+
+.status {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.online {
+  background-color: #31a24c;
+}
+
+.offline {
+  border: 2px solid #b0b0b0;
+}
+
+.avatar {
+  border-radius: 50%;
+  background-color: #f1f1f1;
+}
+
+.avatarPlug {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #b0b0b0;
+  background-color: #eeeeee;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 18px;
+  color: #2c2c2c;
+  margin: 0;
+}
+

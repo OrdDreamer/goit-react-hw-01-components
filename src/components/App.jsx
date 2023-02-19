@@ -1,8 +1,10 @@
 import styles from './app.module.css'
 import ProfileCard from './ProfileCard';
 import Statistics from './Statistics';
+import FriendsList from './FriendsList';
 import userData from '../data/user.json';
 import statisticsData from '../data/statistics.json';
+import friendsData from '../data/friends.json';
 
 export const App = () => {
   return (
@@ -31,6 +33,11 @@ export const App = () => {
         title={"Upload stats"}
         stats={statisticsData}
         className={styles.stats}
+      />
+
+      <FriendsList
+        friends={friendsData}
+        className={styles.friendsList}
       />
     </div>
   );
