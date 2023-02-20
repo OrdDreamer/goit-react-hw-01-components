@@ -1,8 +1,4 @@
-.redText {
-  color: red;
-}
-
-.card {
+.profile {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(140,149,159,0.15);
@@ -11,15 +7,14 @@
   cursor: default;
 }
 
-.infoContainer {
+.description {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px;
-  gap: 40px;
 }
 
-.infoContainer.noImage::before {
+.description.noImage::before {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,26 +28,28 @@
   color: #919191;
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  margin: 0;
-  font-size: 24px;
-  color: #919191;
-  text-align: center;
-}
-
 .avatar {
   border-radius: 50%;
   background-color: #f1f1f1;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.userName {
+.name {
   font-weight: 600;
   font-size: 32px;
   color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.tag {
+  margin-bottom: 10px;
+}
+
+.tag, .location {
+  font-size: 24px;
+  color: #919191;
+  text-align: center;
 }
 
 .stats {
@@ -79,7 +76,13 @@
   border-right: none;
 }
 
-.statsValue {
+.label {
+  color: #919191;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.quantity {
   font-weight: 600;
   color: #000
 }
