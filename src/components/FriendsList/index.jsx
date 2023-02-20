@@ -7,13 +7,13 @@ const FriendsList = ({ friends = [], className }) => {
   return (
     <ul className={`${styles.friendsList} ${className || ''}`}>
       {
-        friends.map((friend) => {
+        friends.map(({avatar, name, isOnline, id}) => {
           return (
             <FriendsListItem
-              avatar={friend.avatar}
-              name={friend.name}
-              isOnline={friend.isOnline}
-              key={friend.id}
+              avatar={avatar}
+              name={name}
+              isOnline={isOnline}
+              key={id}
             />
           );
         })

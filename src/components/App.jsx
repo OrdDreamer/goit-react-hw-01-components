@@ -1,10 +1,12 @@
-import styles from './app.module.css'
+import styles from './app.module.css';
 import ProfileCard from './ProfileCard';
 import Statistics from './Statistics';
 import FriendsList from './FriendsList';
+import TransactionsHistory from './TransactionsHistory';
 import userData from '../data/user.json';
 import statisticsData from '../data/statistics.json';
 import friendsData from '../data/friends.json';
+import transactionsData from '../data/transactions.json';
 
 export const App = () => {
   return (
@@ -30,7 +32,7 @@ export const App = () => {
       />
 
       <Statistics
-        title={"Upload stats"}
+        title={'Upload stats'}
         stats={statisticsData}
         className={styles.stats}
       />
@@ -38,6 +40,11 @@ export const App = () => {
       <FriendsList
         friends={friendsData}
         className={styles.friendsList}
+      />
+
+      <TransactionsHistory
+        items={transactionsData}
+        className={styles.transactionsHistory}
       />
     </div>
   );
