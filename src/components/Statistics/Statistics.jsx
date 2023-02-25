@@ -1,25 +1,25 @@
 import styles from './statistics.module.css';
 import PropTypes from 'prop-types';
 
-const Statistics = ({ stats, title = 'Upload stats', className }) => {
+const Statistics = ({ stats, title }) => {
   const getRandomColor = () => Math.floor(Math.random() * 16777215).toString(16);
 
   return (
-    <div className={`${styles.statistics} ${className || ''}`}>
-      <h2 className={styles.title}>{title}</h2>
+    <div className={styles.statistics}>
+      { title && <h2 className={styles.title}>{title}</h2> }
 
       <ul className={styles.statList}>
-        {stats.map((item, i, array) => {
+        {stats.map(({label, percentage, id}, i, array) => {
           return (
             <li className={styles.item}
-                key={item.key}
+                key={id}
                 style={{
                   flexBasis: `calc(100% / ${array.length})`,
                   backgroundColor: `#${getRandomColor()}`,
                 }}
             >
-              <span className={styles.label}>{item.label}</span>
-              <span className={styles.percentage}>{item.percentage}%</span>
+              <span className={styles.label}>{label}</span>
+              <span className={styles.percentage}>{percentage}%</span>
             </li>
           );
         })}
@@ -36,8 +36,7 @@ Statistics.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    }),
+    }).isRequired,
   ).isRequired,
   title: PropTypes.string,
-  className: PropTypes.string,
 };

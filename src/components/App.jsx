@@ -1,8 +1,7 @@
-import styles from './app.module.css';
-import ProfileCard from './ProfileCard';
-import Statistics from './Statistics';
-import FriendsList from './FriendsList';
-import TransactionsHistory from './TransactionsHistory';
+import ProfileCard from './ProfileCard/ProfileCard';
+import Statistics from './Statistics/Statistics';
+import FriendsList from './FriendsList/FriendsList';
+import TransactionsHistory from './TransactionsHistory/TransactionsHistory';
 import userData from '../data/user.json';
 import statisticsData from '../data/statistics.json';
 import friendsData from '../data/friends.json';
@@ -28,23 +27,19 @@ export const App = () => {
         location={userData.location}
         avatar={userData.avatar}
         stats={userData.stats}
-        className={styles.profile}
       />
 
       <Statistics
         title={'Upload stats'}
         stats={statisticsData}
-        className={styles.stats}
       />
 
       <FriendsList
         friends={friendsData}
-        className={styles.friendsList}
       />
 
       <TransactionsHistory
         items={transactionsData}
-        className={styles.transactionsHistory}
       />
     </div>
   );

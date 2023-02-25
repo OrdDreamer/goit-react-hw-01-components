@@ -6,6 +6,7 @@
   overflow: hidden;
   display: block;
   cursor: default;
+  width: 380px;
 }
 
 .title {

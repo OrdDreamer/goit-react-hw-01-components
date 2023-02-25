@@ -11,6 +11,7 @@
   border-collapse: collapse;
   border-spacing: 0;
   color: #2c2c2c;
+  width: 380px;
 }
 
 .transactionHistory thead tr {

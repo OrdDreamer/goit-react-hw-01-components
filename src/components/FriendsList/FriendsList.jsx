@@ -1,11 +1,11 @@
 import styles from './friendsList.module.css';
 import PropTypes from 'prop-types';
-import FriendsListItem from '../FriendsListItem';
+import FriendsListItem from '../FriendsListItem/FriendsListItem';
 
-const FriendsList = ({ friends = [], className }) => {
+const FriendsList = ({ friends = [] }) => {
 
   return (
-    <ul className={`${styles.friendsList} ${className || ''}`}>
+    <ul className={styles.friendsList}>
       {
         friends.map(({avatar, name, isOnline, id}) => {
           return (
@@ -31,7 +31,6 @@ FriendsList.propTypes = {
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
       id: PropTypes.number.isRequired,
-    }),
+    }).isRequired,
   ).isRequired,
-  className: PropTypes.string,
 };

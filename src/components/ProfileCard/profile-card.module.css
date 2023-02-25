@@ -5,6 +5,7 @@
   border: 1px solid #d0d7de;
   overflow: hidden;
   cursor: default;
+  width: 380px;
 }
 
 .description {
@@ -70,6 +71,7 @@
   border-left: none;
   border-bottom: none;
   background-color: #f3f6f9;
+  flex-basis: calc(100% / 3);
 }
 
 .statsItem:last-child {
